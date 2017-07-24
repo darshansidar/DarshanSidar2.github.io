@@ -230,11 +230,23 @@
 			</div><!-- end container -->
 		</section><!-- end section -->
 
-		<div id="map" class="wow slideInUp nopadding"></div>
+	<div id="map" style="width:100%;height:400px;"></div>
 
-		<div id="backto">
-			<div class="backtotop"><i class="fa fa-angle-double-up"></i></div>
-		</div>
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(12.911004, 77.633113); 
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmxiX7EzF3I9ar8j1XP2mQHyvvVfuhA5I&callback=myMap"></script>
 
 		<footer class="footer light">
 			<div class="container">
@@ -257,8 +269,8 @@
 		</footer><!-- end section -->
 	</div><!-- end wrapper -->
 
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="js/map.js"></script>
+    <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+    <!-- <script src="js/map.js"></script> -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/retina.js"></script>
