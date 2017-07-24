@@ -1044,7 +1044,11 @@
 	}
 
 	.section {
-		padding:160px 0;
+		    
+    padding-top: 160px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
 		position: relative;
 		display: block;
 		z-index: 10;
